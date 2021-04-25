@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}{{ _('SignIn') }}{% endblock %}
+{% block body %}
+  <h2>{{ _('SignIn') }}</h2>
+  {% if error %}<div class="error"><strong>Error:</strong> {{ error }}</div>{% endif %}
+  <form action="" method="post" name="login">
+    {{ form.csrf_token }}
+    <dl>
+      <dt>{{ form.username.label }}
+      <dd>{{ form.username(size=20) }}
+      <dt>{{ form.password.label }}
+      <dd>{{ form.password(size=20) }}
+    </dl>
+    <div class="actions">{{ form.submit(size=20) }}</div>
+  </form>
+{% endblock %}

@@ -1,0 +1,9 @@
+flask
+flask-sqlalchemy
+flask-login
+flask-babel
+Flask-WTF
+Flask-Migrate
+Flask-Script
+psycopg2
+gunicorn
